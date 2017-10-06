@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>game adu suit</title>
+
+  	<!-- Link to the jQuery Library -->
+    	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    	<!-- Links to Firebase -->
+    	<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+      <script src="js/config.js"></script>
+
+      <!-- Link to the Bootstrap Library -->
+    	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+  		<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css" rel="stylesheet" integrity="sha384-gv0oNvwnqzF6ULI9TVsSmnULNb3zasNysvWwfT/s4l8k5I+g6oFz9dye0wg3rQ2Q" crossorigin="anonymous">
+
+  	<!-- Links to an dditional CSS Stylesheet -->
+  	<link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+
+
+    	<!-- Overall Bootstrap Grid -->
+      	<div class="container">
+    			<div class="row text-center">
+    				<h1>Permainan Batu kertas guntinng</h1>
+    			</div>
+    	    <!-- Player Name Section -->
+    			<br><br>
+    	    <div class="formPanel">
+            	<form id="name-form">
+              		<input type="text" id="name-input" placeholder="Your Name" class="form-control"><br><br>
+              		<input id="add-name" type="submit" value="Submit" class="btn btn-danger">
+            	</form>
+          	</div> <!-- End Player Name Section  -->
+
+    	   	<!-- Game Data Section -->
+    		<div class="panel panel-default">
+    		    <div class="row"> <!-- Game Data Row -->
+
+    		    	<!-- Player 1 Section -->
+    		        <div class="col-lg-4 col-md-4 col-sm-4">
+    		            <div class="panel panel-default playerPanel" id="playerPanel1">
+    		                <div class="panel-heading panelName">
+    							<h3 class="panel-title text-center" id="playerOneName"></h3>
+    						</div>
+
+    		                <div class="panel-body panelOption text-center">
+    		                	<div class="option">Batu</div>
+    		                </div>
+
+    		                <div class="panel-body panelOption text-center">
+    		                	<div class="option">Kertas</div>
+    		                </div>
+
+    		                <div class="panel-body panelOption text-center">
+    		                	<div class="option">Gunting</div>
+    		                </div>
+
+
+    		                <div class="panel-body panelStats text-center">
+    		                	<div class="stats" id="player1Stats"></div>
+    		                </div>
+    		            </div>
+    		        </div> <!-- End Player 1 Section -->
+
+    		        <!-- Game Outcome Section -->
+    		        <div class="col-lg-4 col-md-4 col-sm-4">
+    		            <div class="panel panel-default gamePanel">
+    		            	<h3 class="panel-title text-center" id="waitingNotice"></h3>
+    		            	<h3 class="panel-title text-center" id="roundOutcome">Batu-Gunting-Kertas</h3>
+    		            </div>
+    		        </div> <!-- End Game Outcome Section -->
+
+    		        <!-- Player 2 Section -->
+    		        <div class="col-lg-4 col-md-4 col-sm-4">
+    		            <div class="panel panel-default playerPanel" id="playerPanel2">
+    		                <div class="panel-heading panelName">
+    							<h3 class="panel-title text-center" id="playerTwoName"></h3>
+    						</div>
+
+    		                <div class="panel-body panelOption text-center">
+    		                	<div class="option">Batu</div>
+    		                </div>
+
+    		                <div class="panel-body panelOption text-center">
+    		                	<div class="option">Kertas</div>
+    		                </div>
+
+    		                <div class="panel-body panelOption text-center">
+    		                	<div class="option">Gunting</div>
+    		                </div>
+
+
+    		                <div class="panel-body panelStats text-center">
+    		                	<div class="stats" id="player2Stats"></div>
+    		                </div>
+    		            </div>
+    		        </div> <!-- End Player 2 Section -->
+
+    		    </div> <!-- Game Data Row -->
+    		</div> <!-- End Game Data Section  -->
+
+    	    <!-- Row containting the website footer -->
+    	    <div class="row">
+
+    	      <div id="footerSpacer">
+
+    	    </div> <!-- End the footer row -->
+
+    	</div> <!-- End Bootstrap Grid -->
+
+    	<!-- Load the JavaScript application file -->
+    	<script type="text/javascript" src="js/app.js"></script>
+
+  </body>
+</html>
